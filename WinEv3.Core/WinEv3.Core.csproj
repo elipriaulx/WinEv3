@@ -1,16 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Include="**\*.cs" />
     <EmbeddedResource Include="**\*.resx" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NETStandard.Library" Version="1.6" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>..\..\..\..\Users\gpriaulx\.nuget\packages\System.IO.IsolatedStorage\4.0.1\ref\netstandard1.4\System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>..\..\..\..\Users\gpriaulx\.nuget\packages\System.Runtime.InteropServices.WindowsRuntime\4.0.1\ref\netcore50\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
